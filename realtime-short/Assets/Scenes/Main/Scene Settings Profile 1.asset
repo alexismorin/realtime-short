@@ -144,22 +144,22 @@ MonoBehaviour:
   m_AdvancedMode: 0
   rotation:
     m_OverrideState: 1
-    m_Value: 354
+    m_Value: 234
     min: 0
     max: 360
   skyIntensityMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   exposure:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: -2
   multiplier:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.5
     min: 0
   upperHemisphereLuxValue:
     m_OverrideState: 0
-    m_Value: 1.7610068
+    m_Value: 2.992698
     min: 0
   desiredLuxValue:
     m_OverrideState: 0
@@ -176,4 +176,4 @@ MonoBehaviour:
     m_Value: 0
   hdriSky:
     m_OverrideState: 1
-    m_Value: {fileID: 8900000, guid: d3a3e7db1daba744dbd6b8973bbddf3e, type: 3}
+    m_Value: {fileID: 8900000, guid: c9bc6cdb7a2e78b4c85ae74715b0a355, type: 3}

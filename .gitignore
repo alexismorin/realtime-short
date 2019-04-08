@@ -35,3 +35,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+realtime-short/Assets/Environment/Skyboxes/DarkStorm4K.hdr.meta
+realtime-short/Assets/Environment/Skyboxes/DarkStorm4K.hdr
+realtime-short/Assets/Environment/Skyboxes/CoriolisNight4k.hdr.meta
+realtime-short/Assets/Environment/Skyboxes/CoriolisNight4k.hdr
+realtime-short/Assets/Environment/Skyboxes/CloudedSunGlow4k.hdr.meta
+realtime-short/Assets/Environment/Skyboxes/CloudedSunGlow4k.hdr
