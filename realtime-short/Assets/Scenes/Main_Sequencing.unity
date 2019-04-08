@@ -416,6 +416,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -3683018165563602218, guid: 53bdc2387a937d044a6dd78a3c54e5bd, type: 2}
     value: {fileID: 1304563805}
+  - key: {fileID: 1874258206529308394, guid: 53bdc2387a937d044a6dd78a3c54e5bd, type: 2}
+    value: {fileID: 1732240769}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1304563807
@@ -631,6 +633,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4db8d1a70d8f474f8147356c2e59ff0, type: 3}
+--- !u!114 &1732240769 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6023491830067870834, guid: a4db8d1a70d8f474f8147356c2e59ff0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1732240768}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1884754975
 PrefabInstance:
   m_ObjectHideFlags: 0
