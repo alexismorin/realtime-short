@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_Curtains Droite
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e5ed6b008a016564c9575ab971829b06,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e5ed6b008a016564c9575ab971829b06,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -221,6 +226,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sm_VanityDesk
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4c2ea29371c79164e9bbbd36e7310744,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4c2ea29371c79164e9bbbd36e7310744,
         type: 3}
@@ -1132,6 +1142,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_TableLamp
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d28c3b2367181ec4e9d70dd0ab817dc0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d28c3b2367181ec4e9d70dd0ab817dc0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1250,6 +1265,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_Handbag
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: bdd70427ce8f41a448a5129f91ac14e7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bdd70427ce8f41a448a5129f91ac14e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1335,6 +1355,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_EndTable
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 09e6f7dd2f747d546a3cdc70bea1a9c5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 09e6f7dd2f747d546a3cdc70bea1a9c5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1409,6 +1434,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sm_Tableau
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8f9a6be90e02e094db51230171507d2a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8f9a6be90e02e094db51230171507d2a,
         type: 3}
@@ -1499,6 +1529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sm_CeilingLamp
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d9c5a654586947643800f1f953625b19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d9c5a654586947643800f1f953625b19,
         type: 3}
@@ -1827,6 +1862,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_Bed
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: aec78f08011ba254981ae49f0fdfd48a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: aec78f08011ba254981ae49f0fdfd48a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2011,6 +2051,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sm_Bookcase
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e59ed1a2956ea0d4890cdffd955a82e1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e59ed1a2956ea0d4890cdffd955a82e1,
         type: 3}
@@ -2292,6 +2337,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_Fauteuil
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 19b5354c6dfcaac44a11be4c7006afa0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 19b5354c6dfcaac44a11be4c7006afa0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2381,6 +2431,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sm_CoatHanger
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: da5abde118276aa4c9e5aeed16fa4ff7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: da5abde118276aa4c9e5aeed16fa4ff7,
         type: 3}
@@ -2472,6 +2527,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_Dresser
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 22cb0227379f69642adb96f54d1f2848,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 22cb0227379f69642adb96f54d1f2848,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2557,6 +2617,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_Ottoman
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 63497030d7c9b6940ae8fa724d0ac368,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 63497030d7c9b6940ae8fa724d0ac368,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2636,6 +2701,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sm_Carpet Bedroom
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f7a3adb889d0ccc4bbf73779e7b8f461,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f7a3adb889d0ccc4bbf73779e7b8f461,
         type: 3}
@@ -2726,6 +2796,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sm_Curtains Gauche
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e5ed6b008a016564c9575ab971829b06,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e5ed6b008a016564c9575ab971829b06,
         type: 3}
@@ -3093,7 +3168,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1866879003
 Transform:
@@ -3135,6 +3210,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sm_Vase
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 185e25c3a57a8f8458bd6b33005ca3f2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 185e25c3a57a8f8458bd6b33005ca3f2,
         type: 3}
