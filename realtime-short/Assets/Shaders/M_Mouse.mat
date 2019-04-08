@@ -277,7 +277,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0, g: 0, b: 0, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _CardboardTint: {r: 0.51886785, g: 0.51886785, b: 0.51886785, a: 1}
+    - _CardboardTint: {r: 0.31132075, g: 0.31132075, b: 0.31132075, a: 1}
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
