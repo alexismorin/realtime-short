@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Mouse Mask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature_mouse
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/LegFront1.L
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/LegFront1.L/LegFront2.L
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/LegFront1.L/LegFront2.L/LegFront3.L
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/LegFront1.L/LegFront2.L/LegFront3.L/LegFront4.L
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/LegFront1.L/LegFront2.L/LegFront3.L/LegFront4.L/FingerFront.L
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/LegFront1.R
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/LegFront1.R/LegFront2.R
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/LegFront1.R/LegFront2.R/LegFront3.R
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/LegFront1.R/LegFront2.R/LegFront3.R/LegFront4.R
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/LegFront1.R/LegFront2.R/LegFront3.R/LegFront4.R/FingerFront.R
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/Spine1
+    m_Weight: 1
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/Spine1/Head
+    m_Weight: 1
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/Spine1/Head/Ear.L
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/Spine1/Head/Ear.R
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/Spine1/Head/MouthDown
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/Spine1/Head/MouthUp
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/Spine1/Head/MouthUp/Eye.L
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine2/Spine1/Head/MouthUp/Eye.R
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/LegBack1.L
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/LegBack1.L/LegBack2.L
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/LegBack1.L/LegBack2.L/LegBack3.L
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/LegBack1.L/LegBack2.L/LegBack3.L/LegBack4.L
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/LegBack1.L/LegBack2.L/LegBack3.L/LegBack4.L/FingerBack.L
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/LegBack1.R
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/LegBack1.R/LegBack2.R
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/LegBack1.R/LegBack2.R/LegBack3.R
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/LegBack1.R/LegBack2.R/LegBack3.R/LegBack4.R
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/LegBack1.R/LegBack2.R/LegBack3.R/LegBack4.R/FingerBack.R
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/Spine4
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/Spine4/Spine5
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/Spine4/Spine5/Tail
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/Spine4/Spine5/Tail/Tail1
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/Spine4/Spine5/Tail/Tail1/Tail2
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/Spine4/Spine5/Tail/Tail1/Tail2/Tail3
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/Base1/Spine3/Spine4/Spine5/Tail/Tail1/Tail2/Tail3/Tail4
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/LegBack_IK.L
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/LegBack_IK.R
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/LegFront_IK.L
+    m_Weight: 0
+  - m_Path: Armature_mouse/Base2/Root/LegFront_IK.R
+    m_Weight: 0
+  - m_Path: Mouse_LOD0
+    m_Weight: 0

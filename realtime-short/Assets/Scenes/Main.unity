@@ -116,7 +116,7 @@ NavMeshSettings:
     cellSize: 0.05
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 1
+    accuratePlacement: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: d2f8a3772700cdf449482003e0955e6f, type: 2}
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073823710}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb0e265e85c8072428445289b59e0cae, type: 3}
   m_Name: 
@@ -348,7 +348,7 @@ MonoBehaviour:
   scenesToLoad:
   - Main_Furniture
   - Main_Lighting
-  - Multi-Level-Loader
+  - Main_Sequencing
 --- !u!4 &1073823712
 Transform:
   m_ObjectHideFlags: 0
