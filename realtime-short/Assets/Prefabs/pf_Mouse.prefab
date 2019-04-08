@@ -734,7 +734,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c7da246af6c35444abbd7e45771cd596, type: 2}
+  - {fileID: 2100000, guid: 7119722c69820304f834e91a45074b8e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1566,9 +1566,9 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b8b549ada3439c644af5614dd65bd490, type: 3}
   m_Controller: {fileID: 9100000, guid: 42eca2010f8239844b97b2013b82f331, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1608,7 +1608,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 359a5528533ae324aa45edfc03277773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints: []
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   additiveAnimationTriggerNames: []
 --- !u!114 &6023491830067870834
 MonoBehaviour:
@@ -1628,7 +1636,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1729945939253312651}
           m_MethodName: GoToNextWaypoint
           m_Mode: 1
           m_Arguments:

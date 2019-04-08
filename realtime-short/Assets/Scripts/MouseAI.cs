@@ -15,9 +15,9 @@ public class MouseAI : MonoBehaviour
 
     void Start()
     {   
-
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+                agent.updatePosition = false;
     }
 
 
@@ -29,6 +29,12 @@ public class MouseAI : MonoBehaviour
 
     public void PlayAdditiveAnimation(){
         anim.SetTrigger("additiveAnimationTriggerNames");
+    }
+
+    void OnAnimatorMove ()
+    {
+        // Update position to agent position
+        transform.position = agent.nextPosition;
     }
 
     void Update ()
@@ -58,10 +64,6 @@ public class MouseAI : MonoBehaviour
      //   GetComponent<LookAt>().lookAtTargetPosition = agent.steeringTarget + transform.forward;
     }
 
-    void OnAnimatorMove ()
-    {
-        // Update position to agent position
-        transform.position = agent.nextPosition;
-    }
+
 
 }
