@@ -5,7 +5,6 @@ Shader "Cardboard"
     Properties
     {
 		_MainTex("_MainTex", 2D) = "white" {}
-		_Tint("Tint", Color) = (0,0,0,0)
 		_CardboardTint("Cardboard Tint", Color) = (0,0,0,0)
     }
 
@@ -170,9 +169,9 @@ Shader "Cardboard"
 					float3 ase_worldNormal = packedInput.ase_texcoord1.xyz;
 					float fresnelNdotV6 = dot( ase_worldNormal, ase_worldViewDir );
 					float fresnelNode6 = ( 0.0 + 1.0 * pow( 1.0 - fresnelNdotV6, 5.0 ) );
-					float temp_output_3_0_g1 = ( 0.4 - fresnelNode6 );
+					float temp_output_3_0_g3 = ( 0.4 - fresnelNode6 );
 					
-					surfaceDescription.Alpha = saturate( ( temp_output_3_0_g1 / fwidth( temp_output_3_0_g1 ) ) );
+					surfaceDescription.Alpha = ( 1.0 - saturate( ( temp_output_3_0_g3 / fwidth( temp_output_3_0_g3 ) ) ) );
 					surfaceDescription.AlphaClipThreshold =  0.5;
 
 					GetSurfaceAndBuiltinData(surfaceDescription, input, V, posInput, surfaceData, builtinData);
@@ -256,7 +255,6 @@ Shader "Cardboard"
 					#endif 
 				};
 
-				float4 _Tint;
 				sampler2D _MainTex;
 				float4 _CardboardTint;
 				
@@ -308,18 +306,19 @@ Shader "Cardboard"
 					UNITY_SETUP_INSTANCE_ID(inputMesh);
 					UNITY_TRANSFER_INSTANCE_ID(inputMesh, outputPackedVaryingsMeshToPS);
 
-					float3 ase_worldPos = GetAbsolutePositionWS( TransformObjectToWorld( (inputMesh.positionOS).xyz ) );
-					outputPackedVaryingsMeshToPS.ase_texcoord.xyz = ase_worldPos;
-					float3 ase_worldNormal = TransformObjectToWorldNormal(inputMesh.normalOS.xyz);
-					outputPackedVaryingsMeshToPS.ase_texcoord1.xyz = ase_worldNormal;
 					float4 ase_clipPos = TransformWorldToHClip( TransformObjectToWorld(inputMesh.positionOS));
 					float4 screenPos = ComputeScreenPos( ase_clipPos , _ProjectionParams.x );
-					outputPackedVaryingsMeshToPS.ase_texcoord2 = screenPos;
+					outputPackedVaryingsMeshToPS.ase_texcoord = screenPos;
+					
+					float3 ase_worldPos = GetAbsolutePositionWS( TransformObjectToWorld( (inputMesh.positionOS).xyz ) );
+					outputPackedVaryingsMeshToPS.ase_texcoord1.xyz = ase_worldPos;
+					float3 ase_worldNormal = TransformObjectToWorldNormal(inputMesh.normalOS.xyz);
+					outputPackedVaryingsMeshToPS.ase_texcoord2.xyz = ase_worldNormal;
 					
 					
 					//setting value to unused interpolator channels and avoid initialization warnings
-					outputPackedVaryingsMeshToPS.ase_texcoord.w = 0;
 					outputPackedVaryingsMeshToPS.ase_texcoord1.w = 0;
+					outputPackedVaryingsMeshToPS.ase_texcoord2.w = 0;
 					float3 vertexValue =  float3( 0, 0, 0 ) ;
 					#ifdef ASE_ABSOLUTE_VERTEX_POS
 					inputMesh.positionOS.xyz = vertexValue;
@@ -349,22 +348,20 @@ Shader "Cardboard"
 					SurfaceData surfaceData;
 					BuiltinData builtinData;
 					SurfaceDescription surfaceDescription = (SurfaceDescription)0;
-					float3 ase_worldPos = packedInput.ase_texcoord.xyz;
-					float3 ase_worldViewDir = ( _WorldSpaceCameraPos.xyz - ase_worldPos );
-					ase_worldViewDir = normalize(ase_worldViewDir);
-					float3 ase_worldNormal = packedInput.ase_texcoord1.xyz;
-					float fresnelNdotV12 = dot( ase_worldNormal, ase_worldViewDir );
-					float fresnelNode12 = ( 0.0 + 1.0 * pow( 1.0 - fresnelNdotV12, 10.0 ) );
-					float4 screenPos = packedInput.ase_texcoord2;
+					float4 screenPos = packedInput.ase_texcoord;
 					float4 ase_grabScreenPos = ASE_ComputeGrabScreenPos( screenPos );
 					float4 ase_grabScreenPosNorm = ase_grabScreenPos / ase_grabScreenPos.w;
 					
+					float3 ase_worldPos = packedInput.ase_texcoord1.xyz;
+					float3 ase_worldViewDir = ( _WorldSpaceCameraPos.xyz - ase_worldPos );
+					ase_worldViewDir = normalize(ase_worldViewDir);
+					float3 ase_worldNormal = packedInput.ase_texcoord2.xyz;
 					float fresnelNdotV6 = dot( ase_worldNormal, ase_worldViewDir );
 					float fresnelNode6 = ( 0.0 + 1.0 * pow( 1.0 - fresnelNdotV6, 5.0 ) );
-					float temp_output_3_0_g1 = ( 0.4 - fresnelNode6 );
+					float temp_output_3_0_g3 = ( 0.4 - fresnelNode6 );
 					
-					surfaceDescription.Color =  ( ( 1.0 - ( _Tint * fresnelNode12 ) ) * ( tex2D( _MainTex, ( ase_grabScreenPosNorm + float4( _WorldSpaceCameraPos , 0.0 ) ).xy ) * _CardboardTint ) ).rgb;
-					surfaceDescription.Alpha = saturate( ( temp_output_3_0_g1 / fwidth( temp_output_3_0_g1 ) ) );
+					surfaceDescription.Color =  ( tex2D( _MainTex, ase_grabScreenPosNorm.xy ) * _CardboardTint ).rgb;
+					surfaceDescription.Alpha = ( 1.0 - saturate( ( temp_output_3_0_g3 / fwidth( temp_output_3_0_g3 ) ) ) );
 					surfaceDescription.AlphaClipThreshold =  0.5;
 
 					GetSurfaceAndBuiltinData(surfaceDescription, input, V, posInput, surfaceData, builtinData);
@@ -564,9 +561,9 @@ Shader "Cardboard"
 						float3 ase_worldNormal = packedInput.ase_texcoord1.xyz;
 						float fresnelNdotV6 = dot( ase_worldNormal, ase_worldViewDir );
 						float fresnelNode6 = ( 0.0 + 1.0 * pow( 1.0 - fresnelNdotV6, 5.0 ) );
-						float temp_output_3_0_g1 = ( 0.4 - fresnelNode6 );
+						float temp_output_3_0_g3 = ( 0.4 - fresnelNode6 );
 						
-						surfaceDescription.Alpha = saturate( ( temp_output_3_0_g1 / fwidth( temp_output_3_0_g1 ) ) );
+						surfaceDescription.Alpha = ( 1.0 - saturate( ( temp_output_3_0_g3 / fwidth( temp_output_3_0_g3 ) ) ) );
 						surfaceDescription.AlphaClipThreshold = 0.5;
 
 						GetSurfaceAndBuiltinData(surfaceDescription,input, V, posInput, surfaceData, builtinData);
@@ -756,10 +753,10 @@ Shader "Cardboard"
 					float3 ase_worldNormal = packedInput.ase_texcoord1.xyz;
 					float fresnelNdotV6 = dot( ase_worldNormal, ase_worldViewDir );
 					float fresnelNode6 = ( 0.0 + 1.0 * pow( 1.0 - fresnelNdotV6, 5.0 ) );
-					float temp_output_3_0_g1 = ( 0.4 - fresnelNode6 );
+					float temp_output_3_0_g3 = ( 0.4 - fresnelNode6 );
 					
 					surfaceDescription.Color =  float3( 1, 1, 1 );
-					surfaceDescription.Alpha = saturate( ( temp_output_3_0_g1 / fwidth( temp_output_3_0_g1 ) ) );
+					surfaceDescription.Alpha = ( 1.0 - saturate( ( temp_output_3_0_g3 / fwidth( temp_output_3_0_g3 ) ) ) );
 					surfaceDescription.AlphaClipThreshold =  0.5;
 
 					GetSurfaceAndBuiltinData(surfaceDescription,input, V, posInput, surfaceData, builtinData);
@@ -790,52 +787,28 @@ Shader "Cardboard"
 }
 /*ASEBEGIN
 Version=16400
-583;346;1311;751;1360.979;346.8524;1.558836;True;True
-Node;AmplifyShaderEditor.FresnelNode;6;-471.0687,-513.961;Float;False;Standard;WorldNormal;ViewDir;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;5;False;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;9;-438.3335,-260.5252;Float;False;Constant;_Float0;Float 0;1;0;Create;True;0;0;False;0;0.4;0;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.SimpleAddOpNode;29;-629.8851,13.23868;Float;False;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT4;0
-Node;AmplifyShaderEditor.FresnelNode;12;-273.3613,-158.9802;Float;False;Standard;WorldNormal;ViewDir;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;10;False;1;FLOAT;0
-Node;AmplifyShaderEditor.OneMinusNode;18;192.1022,-196.7403;Float;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.SimpleAddOpNode;23;-519.3245,350.061;Float;False;2;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;1;FLOAT2;0
-Node;AmplifyShaderEditor.RangedFloatNode;11;207.4439,133.1799;Float;False;Constant;_Float1;Float 1;1;0;Create;True;0;0;False;0;0.5;0;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.DeltaTime;27;-584.366,662.8016;Float;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;14;26.36551,-189.436;Float;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.GrabScreenPosition;4;-911.2461,-164.2819;Float;False;0;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.ColorNode;20;-284.4799,370.8614;Float;False;Property;_CardboardTint;Cardboard Tint;2;0;Create;True;0;0;False;0;0,0,0,0;0.3113208,0.3113208,0.3113208,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SamplerNode;5;-440.983,95.82771;Float;True;Property;_MainTex;_MainTex;0;0;Create;True;0;0;False;0;None;1be9a7fd6edf4a44c9e6c044f9c8ffb1;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.NoiseGeneratorNode;24;-823.2216,274.4888;Float;False;Simplex2D;1;0;FLOAT2;0,0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.WorldSpaceCameraPos;28;-922.9464,16.35633;Float;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;21;-54.63568,327.5498;Float;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.FunctionNode;8;-98.50555,-484.1095;Float;False;Step Antialiasing;-1;;1;2a825e80dfb3290468194f83380797bd;0;2;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;19;202.6361,-1.110042;Float;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.ColorNode;15;-249.8156,-317.1353;Float;False;Property;_Tint;Tint;1;0;Create;True;0;0;False;0;0,0,0,0;0,0,0,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.NoiseGeneratorNode;26;-555.4235,508.4413;Float;False;Simplex2D;1;0;FLOAT2;0,0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.RotatorNode;25;-741.2923,159.9589;Float;False;3;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;2;FLOAT;1;False;1;FLOAT2;0
-Node;AmplifyShaderEditor.DeltaTime;22;-802.3185,446.5362;Float;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;2;0,0;Float;False;False;2;Float;ASEMaterialInspector;0;4;Hidden/Templates/HDSRPUnlit;dfe2f27ac20b08c469b2f95c236be0c3;True;ShadowCaster;0;2;ShadowCaster;1;True;1;1;False;-1;0;False;-1;0;1;False;-1;0;False;-1;False;False;True;0;False;-1;False;False;True;1;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;3;RenderPipeline=HDRenderPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;5;0;False;False;False;False;True;False;False;False;False;0;False;-1;False;False;False;False;True;1;LightMode=ShadowCaster;False;0;;0;0;Standard;0;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;0
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;3;0,0;Float;False;False;2;Float;ASEMaterialInspector;0;4;Hidden/Templates/HDSRPUnlit;dfe2f27ac20b08c469b2f95c236be0c3;True;META;0;3;META;1;True;1;1;False;-1;0;False;-1;0;1;False;-1;0;False;-1;False;False;True;0;False;-1;False;False;True;1;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;3;RenderPipeline=HDRenderPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;5;0;False;False;False;True;2;False;-1;False;False;False;False;False;True;1;LightMode=Meta;False;0;;0;0;Standard;0;5;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT3;0,0,0;False;4;FLOAT3;0,0,0;False;0
+198;911;1311;739;1227.764;934.9789;1.815014;True;True
+Node;AmplifyShaderEditor.FresnelNode;6;-494.0772,-524.109;Float;False;Standard;WorldNormal;ViewDir;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;5;False;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;9;-483.3401,-319.7454;Float;False;Constant;_Float0;Float 0;1;0;Create;True;0;0;False;0;0.4;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.FunctionNode;8;-50.44378,-435.0319;Float;False;Step Antialiasing;-1;;3;2a825e80dfb3290468194f83380797bd;0;2;1;FLOAT;0;False;2;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;11;408.8106,-117.2592;Float;False;Constant;_Float1;Float 1;1;0;Create;True;0;0;False;0;0.5;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;21;-84.58743,-132.8616;Float;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SamplerNode;5;-504.7337,-140.2832;Float;True;Property;_MainTex;_MainTex;0;0;Create;True;0;0;False;0;None;1be9a7fd6edf4a44c9e6c044f9c8ffb1;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.GrabScreenPosition;4;-826.9168,-121.0183;Float;False;0;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.ColorNode;20;-348.2308,134.7502;Float;False;Property;_CardboardTint;Cardboard Tint;1;0;Create;True;0;0;False;0;0,0,0,0;1,1,1,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.OneMinusNode;22;235.1376,-472.1504;Float;False;1;0;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;1;556.6396,-504.1302;Float;False;True;2;Float;ASEMaterialInspector;0;4;Cardboard;dfe2f27ac20b08c469b2f95c236be0c3;True;Forward Unlit;0;1;Forward Unlit;5;True;1;1;False;-1;0;False;-1;0;1;False;-1;0;False;-1;False;False;True;0;False;-1;False;False;True;1;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;3;RenderPipeline=HDRenderPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;5;0;False;False;False;False;True;True;True;True;True;0;False;-1;True;False;255;False;-1;255;False;-1;255;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;False;False;False;True;1;LightMode=ForwardOnly;False;0;;0;0;Standard;1;Vertex Position,InvertActionOnDeselection;1;0;4;True;True;True;True;False;5;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT3;0,0,0;False;4;FLOAT3;0,0,0;False;0
 Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;0;0,0;Float;False;False;2;Float;ASEMaterialInspector;0;4;Hidden/Templates/HDSRPUnlit;dfe2f27ac20b08c469b2f95c236be0c3;True;Depth prepass;0;0;Depth prepass;0;True;1;1;False;-1;0;False;-1;0;1;False;-1;0;False;-1;False;False;True;0;False;-1;False;False;True;1;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;3;RenderPipeline=HDRenderPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;5;0;False;False;False;False;True;False;False;False;False;0;False;-1;True;False;255;False;-1;255;False;-1;255;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;False;False;False;True;1;LightMode=DepthForwardOnly;False;0;;0;0;Standard;0;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;0
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;1;458.4946,-91.24394;Float;False;True;2;Float;ASEMaterialInspector;0;4;Cardboard;dfe2f27ac20b08c469b2f95c236be0c3;True;Forward Unlit;0;1;Forward Unlit;5;True;1;1;False;-1;0;False;-1;0;1;False;-1;0;False;-1;False;False;True;0;False;-1;False;False;True;1;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;3;RenderPipeline=HDRenderPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;5;0;False;False;False;False;True;True;True;True;True;0;False;-1;True;False;255;False;-1;255;False;-1;255;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;False;False;False;True;1;LightMode=ForwardOnly;False;0;;0;0;Standard;1;Vertex Position,InvertActionOnDeselection;1;0;4;True;True;True;True;False;5;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT3;0,0,0;False;4;FLOAT3;0,0,0;False;0
-WireConnection;29;0;4;0
-WireConnection;29;1;28;0
-WireConnection;18;0;14;0
-WireConnection;23;0;25;0
-WireConnection;23;1;24;0
-WireConnection;14;0;15;0
-WireConnection;14;1;12;0
-WireConnection;5;1;29;0
-WireConnection;24;0;22;1
-WireConnection;21;0;5;0
-WireConnection;21;1;20;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;2;-89.10582,-27.65369;Float;False;False;2;Float;ASEMaterialInspector;0;4;Hidden/Templates/HDSRPUnlit;dfe2f27ac20b08c469b2f95c236be0c3;True;ShadowCaster;0;2;ShadowCaster;1;True;1;1;False;-1;0;False;-1;0;1;False;-1;0;False;-1;False;False;True;0;False;-1;False;False;True;1;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;3;RenderPipeline=HDRenderPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;5;0;False;False;False;False;True;False;False;False;False;0;False;-1;False;False;False;False;True;1;LightMode=ShadowCaster;False;0;;0;0;Standard;0;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;3;-89.10582,-27.65369;Float;False;False;2;Float;ASEMaterialInspector;0;4;Hidden/Templates/HDSRPUnlit;dfe2f27ac20b08c469b2f95c236be0c3;True;META;0;3;META;1;True;1;1;False;-1;0;False;-1;0;1;False;-1;0;False;-1;False;False;True;0;False;-1;False;False;True;1;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;3;RenderPipeline=HDRenderPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;5;0;False;False;False;True;2;False;-1;False;False;False;False;False;True;1;LightMode=Meta;False;0;;0;0;Standard;0;5;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT3;0,0,0;False;4;FLOAT3;0,0,0;False;0
 WireConnection;8;1;6;0
 WireConnection;8;2;9;0
-WireConnection;19;0;18;0
-WireConnection;19;1;21;0
-WireConnection;26;0;27;2
-WireConnection;25;0;4;0
-WireConnection;25;1;26;0
-WireConnection;1;0;19;0
-WireConnection;1;1;8;0
+WireConnection;21;0;5;0
+WireConnection;21;1;20;0
+WireConnection;5;1;4;0
+WireConnection;22;0;8;0
+WireConnection;1;0;21;0
+WireConnection;1;1;22;0
 WireConnection;1;2;11;0
 ASEEND*/
-//CHKSM=833E984595C0EE95655A9E34FB6873B104ED8768
+//CHKSM=164EC47300515753A64FC8BFE655B6B86C63685E
