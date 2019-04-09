@@ -3,7 +3,27 @@ guid: 2f6480708ea39d1488fbb4d46e6bb9bc
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Door
+    second: {fileID: 2100000, guid: 9ad010d367f96c646ba443e3200b1f55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_Murs
+    second: {fileID: 2100000, guid: 9ad010d367f96c646ba443e3200b1f55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_Planchers
+    second: {fileID: 2100000, guid: 9ad010d367f96c646ba443e3200b1f55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_PlinthesNFrames
+    second: {fileID: 2100000, guid: 9ad010d367f96c646ba443e3200b1f55, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
