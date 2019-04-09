@@ -8,8 +8,8 @@
         "launchAfterInstallation": true,
         "HideSendToUnityMenu": true,
         "BakeAnimation": true,
-        "integrationSavePath": "D:\\Github\\realtime-short\\realtime-short",
-        "selectedDCCApp": 0,
+        "integrationSavePath": "C:\\Users\\Kelly\\Documents\\GitHub\\realtime-short\\realtime-short",
+        "selectedDCCApp": 1,
         "prefabSavePaths": [
             "."
         ],
@@ -19,8 +19,14 @@
         ],
         "selectedFbxPath": 0,
         "selectedPrefabPath": 0,
-        "dccOptionNames": [],
-        "dccOptionPaths": [],
+        "dccOptionNames": [
+            "3ds Max 2019",
+            "Maya 2019"
+        ],
+        "dccOptionPaths": [
+            "C:/Program Files/Autodesk/3ds Max 2019/3dsmax.exe",
+            "C:/Program Files/Autodesk/Maya2019/bin/maya.exe"
+        ],
         "exportModelSettingsSerialize": {
             "exportFormat": 0,
             "animatedSkinnedMesh": false,

@@ -1,0 +1,402 @@
+fileFormatVersion: 2
+guid: df79f7bf3d1bf3042a0f4642748d04f7
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 232528478, guid: 43a8bbf65be290d44ba52b94476242b9, type: 3}
+  version: 17
+  mGraphInstanceData:
+  - graphLabel: Plastic
+    prototypeName: Plastic
+    graphDescIndex: 0
+    generateAllOutputs: 1
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Plastic\" label=\"\" >\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: 
+    texturePackingList:
+    - outputName: baseColor
+      alphaSource: baseColor
+    - outputName: normal
+      alphaSource: normal
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: smoothness
+    - outputName: height
+      alphaSource: height
+    - outputName: ambientOcclusion
+      alphaSource: ambientOcclusion
+    - outputName: mask
+      alphaSource: mask
+    textureParameters:
+    - textureName: Plastic - roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic - baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic - normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic - metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic - height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic - ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic - mask
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: baseColor
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: height
+      bLinear: 1
+    - outputName: ambientOcclusion
+      bLinear: 1
+    - outputName: mask
+      bLinear: 1
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      textureWidth: 2048
+      textureHeight: 2048
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {fileID: -389402008792246631, guid: df79f7bf3d1bf3042a0f4642748d04f7,
+      type: 3}
+    generatedTextures:
+    - {fileID: -1549854889565496426, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: -9138323009942834428, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: -7024073850511412688, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: 3621918081989012779, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: 5066771434742787505, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: 8307044828824881538, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: -3299357365891658065, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+  - graphLabel: floor
+    prototypeName: floor
+    graphDescIndex: 1
+    generateAllOutputs: 1
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://floor\" label=\"\" >\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: 
+    texturePackingList:
+    - outputName: baseColor
+      alphaSource: baseColor
+    - outputName: normal
+      alphaSource: normal
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: smoothness
+    - outputName: height
+      alphaSource: height
+    - outputName: ambientOcclusion
+      alphaSource: ambientOcclusion
+    - outputName: mask
+      alphaSource: mask
+    textureParameters:
+    - textureName: floor - roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: floor - baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: floor - normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: floor - metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: floor - height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: floor - ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: floor - mask
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: baseColor
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: height
+      bLinear: 1
+    - outputName: ambientOcclusion
+      bLinear: 1
+    - outputName: mask
+      bLinear: 1
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      textureWidth: 2048
+      textureHeight: 2048
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {fileID: -2055973457806187997, guid: df79f7bf3d1bf3042a0f4642748d04f7,
+      type: 3}
+    generatedTextures:
+    - {fileID: 6792485821698080913, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: 7107858450938315073, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: 4146439939940363962, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: -3983842169163623995, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: -1753015913840876699, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: -3194678184438418665, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: -2635773825615289536, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+  - graphLabel: Plastic_color2
+    prototypeName: Plastic
+    graphDescIndex: 0
+    generateAllOutputs: 1
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Plastic\" label=\"\" >\n  <presetinput identifier=\"Color\"
+      uid=\"1969266595\" type=\"3\" value=\"0.909804,0.592157,0.623529,1\" />\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: 
+    texturePackingList:
+    - outputName: baseColor
+      alphaSource: baseColor
+    - outputName: normal
+      alphaSource: normal
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: smoothness
+    - outputName: height
+      alphaSource: height
+    - outputName: ambientOcclusion
+      alphaSource: ambientOcclusion
+    - outputName: mask
+      alphaSource: mask
+    textureParameters:
+    - textureName: Plastic_1 - roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_1 - baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_1 - normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_1 - metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_1 - height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_1 - ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_1 - mask
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_color2 - roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_color2 - baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_color2 - normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_color2 - metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_color2 - height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_color2 - ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_color2 - mask
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: baseColor
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: height
+      bLinear: 1
+    - outputName: ambientOcclusion
+      bLinear: 1
+    - outputName: mask
+      bLinear: 1
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      textureWidth: 2048
+      textureHeight: 2048
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {fileID: 1176185054470890282, guid: df79f7bf3d1bf3042a0f4642748d04f7,
+      type: 3}
+    generatedTextures: []
+  - graphLabel: Plastic_color3
+    prototypeName: Plastic
+    graphDescIndex: 0
+    generateAllOutputs: 1
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Plastic\" label=\"\" >\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: 
+    texturePackingList:
+    - outputName: baseColor
+      alphaSource: baseColor
+    - outputName: normal
+      alphaSource: normal
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: smoothness
+    - outputName: height
+      alphaSource: height
+    - outputName: ambientOcclusion
+      alphaSource: ambientOcclusion
+    - outputName: mask
+      alphaSource: mask
+    textureParameters:
+    - textureName: Plastic_1 - roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_1 - baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_1 - normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_1 - metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_1 - height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_1 - ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_1 - mask
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_color3 - roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_color3 - baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_color3 - normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_color3 - metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_color3 - height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_color3 - ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Plastic_color3 - mask
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: baseColor
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: height
+      bLinear: 1
+    - outputName: ambientOcclusion
+      bLinear: 1
+    - outputName: mask
+      bLinear: 1
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      textureWidth: 2048
+      textureHeight: 2048
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {fileID: 2758622402092310978, guid: df79f7bf3d1bf3042a0f4642748d04f7,
+      type: 3}
+    generatedTextures:
+    - {fileID: -4096321378049846951, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: 6067491719870516995, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: -2241349302806561835, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: 135969502521356218, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: -5043233930497128341, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: 202846150703504347, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
+    - {fileID: 4866930029254594749, guid: df79f7bf3d1bf3042a0f4642748d04f7, type: 3}
