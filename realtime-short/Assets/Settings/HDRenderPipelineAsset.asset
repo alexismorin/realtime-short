@@ -28,7 +28,7 @@ MonoBehaviour:
       data2: 4539628424389459968
   m_RenderPipelineSettings:
     supportShadowMask: 1
-    supportSSR: 0
+    supportSSR: 1
     supportSSAO: 1
     supportSubsurfaceScattering: 1
     increaseSssSampleCount: 0
@@ -73,11 +73,11 @@ MonoBehaviour:
       directionalShadowsDepthBits: 32
       shadowQuality: 0
       punctualLightShadowAtlas:
-        shadowAtlasResolution: 4096
+        shadowAtlasResolution: 8192
         shadowAtlasDepthBits: 32
         useDynamicViewportRescale: 1
       areaLightShadowAtlas:
-        shadowAtlasResolution: 4096
+        shadowAtlasResolution: 8192
         shadowAtlasDepthBits: 32
         useDynamicViewportRescale: 1
     decalSettings:

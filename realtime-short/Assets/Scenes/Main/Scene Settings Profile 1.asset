@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5682224305419535721
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e17fad69ea181b4483974138b566975, type: 3}
+  m_Name: ScreenSpaceRefraction
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  screenFadeDistance:
+    m_OverrideState: 1
+    m_Value: 0.204
+    min: 0.001
+    max: 1
 --- !u!114 &-4873233858443984942
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -118,6 +137,58 @@ MonoBehaviour:
   - {fileID: 8567257427814188941}
   - {fileID: -3211513357255049518}
   - {fileID: 2172666554583574868}
+  - {fileID: 497922659887989250}
+  - {fileID: -5682224305419535721}
+  - {fileID: 8608969176391888131}
+--- !u!114 &497922659887989250
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f077503be6ae942a1e1245dbd53ea9, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.573
+    min: 0
+    max: 1
+  scatter:
+    m_OverrideState: 1
+    m_Value: 0.577
+    min: 0
+    max: 1
+  tint:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    hdr: 0
+    showAlpha: 0
+    showEyeDropper: 1
+  dirtTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 69e847bbff1cf5449a4ee0bbd045dbc9, type: 3}
+  dirtIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+  highQualityFiltering:
+    m_OverrideState: 0
+    m_Value: 1
+  resolution:
+    m_OverrideState: 0
+    m_Value: 2
+  prefilter:
+    m_OverrideState: 0
+    m_Value: 0
+  anamorphic:
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!114 &1400016085652610054
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -178,10 +249,10 @@ MonoBehaviour:
   m_AdvancedMode: 0
   enable:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   length:
-    m_OverrideState: 0
-    m_Value: 0.15
+    m_OverrideState: 1
+    m_Value: 0.804
     min: 0
     max: 1
   opacity:
@@ -339,32 +410,72 @@ MonoBehaviour:
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 3
   toeStrength:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 0.166
     min: 0
     max: 1
   toeLength:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.5
     min: 0
     max: 1
   shoulderStrength:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
     min: 0
     max: 1
   shoulderLength:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.5
     min: 0
   shoulderAngle:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
     min: 0
     max: 1
   gamma:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
     min: 0.001
+--- !u!114 &8608969176391888131
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 384c4d03a551c44448145f4093304119, type: 3}
+  m_Name: ScreenSpaceReflection
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  depthBufferThickness:
+    m_OverrideState: 1
+    m_Value: 0.01
+    min: 0
+    max: 1
+  screenFadeDistance:
+    m_OverrideState: 1
+    m_Value: 0.1
+    min: 0
+    max: 1
+  minSmoothness:
+    m_OverrideState: 1
+    m_Value: 0.9
+    min: 0
+    max: 1
+  smoothnessFadeStart:
+    m_OverrideState: 1
+    m_Value: 0.9
+    min: 0
+    max: 1
+  reflectSky:
+    m_OverrideState: 1
+    m_Value: 1
+  rayMaxIterations:
+    m_OverrideState: 1
+    m_Value: 32
