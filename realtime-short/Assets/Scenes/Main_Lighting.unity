@@ -97,7 +97,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-  m_LightingDataAsset: {fileID: 112000006, guid: 77a9cf974cc75684e989cd58218e6b0a,
+  m_LightingDataAsset: {fileID: 112000006, guid: f2e2503b38041ed4795d3ad2e27e397d,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -158,7 +158,7 @@ Transform:
   - {fileID: 1917332214}
   - {fileID: 878160482}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &637831153
 GameObject:
@@ -338,7 +338,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 1691
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 6.41593e-40, y: 1.435e-42, z: 8.4302e-41, w: 0}
+  m_BoundingSphereOverride: {x: 9, y: 9, z: -10, w: 7}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -354,7 +354,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 50, z: 0}
 --- !u!1 &649345987
 GameObject:
@@ -535,7 +535,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 33506229ff23dd740b7ef9d9f00ba9f5, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 66e18ce0a1a2102499ca9667a4d64f8b, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -938,7 +938,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 7000
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4e-45}
+  m_BoundingSphereOverride: {x: 0.3359375, y: 0.02734375, z: 0.01171875, w: -0.02734375}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -954,7 +954,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 43.81, y: -46.723003, z: -4.4610004}
 --- !u!1 &784663197
 GameObject:
@@ -1061,7 +1061,7 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 1
-  displayLightIntensity: 130
+  displayLightIntensity: 150
   displayAreaLightEmissiveMesh: 0
   areaLightCookie: {fileID: 0}
   areaLightShadowCone: 120
@@ -1089,7 +1089,7 @@ Light:
   serializedVersion: 9
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10.345071
+  m_Intensity: 11.936621
   m_Range: 6
   m_SpotAngle: 125
   m_InnerSpotAngle: 12
@@ -1127,14 +1127,14 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 41217
+  m_RenderingLayerMask: 1
   m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 2750
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 9.629944e-35, w: 2.27078e-40}
+  m_BoundingSphereOverride: {x: 0, y: 1, z: 1.7518e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1150,7 +1150,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 113.213, y: 89.020996, z: 87.924995}
 --- !u!1 &878160481
 GameObject:
@@ -1345,7 +1345,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 361071af8285c1a4ba3ee593172fdb93, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: a85ddb4b6e0b19848b9329eabf587628, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -1812,7 +1812,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 4053ecac5581a5c4087a3752e0bc282d, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: e9415e38ba24d1740977be83f7edb3ff, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -2216,7 +2216,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 88d9302a66af2704a9b6340fe78ade2b, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 50859696a95495f438f73e8d31573160, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -2620,7 +2620,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 3507947e90bb2f943ad898f7ffc57bd6, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: b157231dafb86c1408ef0d829a8998ce, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -2966,7 +2966,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1331582783
 GameObject:
@@ -3147,7 +3147,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: ff5ae6ee9e29d6048abda936804a24a8, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 5b2781c55b84d6546970f18d812c228e, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -3438,7 +3438,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1686611129
 GameObject:
@@ -3619,7 +3619,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 246f9741a2ccd3d4da927b3773849c7d, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: f5d5107393c8c5d4e9ee57b01f4d273c, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -4023,7 +4023,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: d1c344d13a9b19d4f8db53511e743786, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 3d583735df9cafd4db7ede4793238e16, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
