@@ -96,7 +96,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000004, guid: f2e2503b38041ed4795d3ad2e27e397d,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -814,7 +815,7 @@ MonoBehaviour:
   areaIntensity: 200
   enableSpotReflector: 0
   luxAtDistance: 1
-  m_InnerSpotPercent: 60
+  m_InnerSpotPercent: 70.7
   lightDimmer: 1
   m_VolumetricDimmer: 1
   lightUnit: 0
@@ -866,7 +867,7 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 5.5704226
   m_Range: 5
-  m_SpotAngle: 155
+  m_SpotAngle: 173
   m_InnerSpotAngle: 12
   m_CookieSize: 10
   m_Shadows:
@@ -921,7 +922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580183993}
   m_LocalRotation: {x: 0.629724, y: 0.35667095, z: -0.18745954, w: 0.6641479}
-  m_LocalPosition: {x: 10.839, y: 4.919, z: 0.661}
+  m_LocalPosition: {x: 10.83, y: 4.957, z: 0.663}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3191,7 +3192,7 @@ MonoBehaviour:
   m_InnerSpotPercent: 75.7
   lightDimmer: 1
   m_VolumetricDimmer: 0
-  lightUnit: 0
+  lightUnit: 2
   sunDiskSize: 1
   sunHaloSize: 0.1
   fadeDistance: 10000
@@ -3210,7 +3211,7 @@ MonoBehaviour:
   useVolumetric: 0
   featuresFoldout: 1
   showAdditionalSettings: 1
-  displayLightIntensity: 110.38
+  displayLightIntensity: 9
   displayAreaLightEmissiveMesh: 0
   areaLightCookie: {fileID: 0}
   areaLightShadowCone: 120
@@ -3238,7 +3239,7 @@ Light:
   serializedVersion: 9
   m_Type: 0
   m_Color: {r: 0.8396226, g: 0.7560427, b: 0.6376379, a: 1}
-  m_Intensity: 8.783761
+  m_Intensity: 9
   m_Range: 10.5
   m_SpotAngle: 114
   m_InnerSpotAngle: 12
@@ -3296,7 +3297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030752512}
   m_LocalRotation: {x: 0.13561097, y: -0.13125479, z: 0.075836115, w: 0.9790969}
-  m_LocalPosition: {x: 12.29914, y: 4.9055033, z: -1.6823051}
+  m_LocalPosition: {x: 12.71, y: 4.82, z: -1.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
