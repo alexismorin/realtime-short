@@ -65,14 +65,14 @@ MonoBehaviour:
     m_Value: 1000
     min: 0
   albedo:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 75
+    m_Value: 100
     min: 1
   baseHeight:
     m_OverrideState: 0
@@ -82,8 +82,8 @@ MonoBehaviour:
     m_Value: 10
     min: 1
   anisotropy:
-    m_OverrideState: 0
-    m_Value: 0.23
+    m_OverrideState: 1
+    m_Value: 0.1
     min: -1
     max: 1
   globalLightProbeDimmer:
@@ -140,6 +140,7 @@ MonoBehaviour:
   - {fileID: 497922659887989250}
   - {fileID: -5682224305419535721}
   - {fileID: 8608969176391888131}
+  - {fileID: 8201605311998262759}
 --- !u!114 &497922659887989250
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -294,7 +295,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.75
     min: 0
     max: 4
   thicknessModifier:
@@ -345,6 +346,78 @@ MonoBehaviour:
   fogType:
     m_OverrideState: 1
     m_Value: 3
+--- !u!114 &8201605311998262759
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d08ce26990eb1a4a9177b860541e702, type: 3}
+  m_Name: Exposure
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  mode:
+    m_OverrideState: 1
+    m_Value: 0
+  meteringMode:
+    m_OverrideState: 0
+    m_Value: 2
+  luminanceSource:
+    m_OverrideState: 0
+    m_Value: 1
+  fixedExposure:
+    m_OverrideState: 1
+    m_Value: -0.5
+  compensation:
+    m_OverrideState: 0
+    m_Value: 0
+  limitMin:
+    m_OverrideState: 0
+    m_Value: -10
+  limitMax:
+    m_OverrideState: 0
+    m_Value: 20
+  curveMap:
+    m_OverrideState: 0
+    m_Value:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: -10
+        value: -10
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 20
+        value: 20
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  adaptationMode:
+    m_OverrideState: 0
+    m_Value: 1
+  adaptationSpeedDarkToLight:
+    m_OverrideState: 0
+    m_Value: 3
+    min: 0.001
+  adaptationSpeedLightToDark:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0.001
 --- !u!114 &8354439727622144167
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -418,7 +491,7 @@ MonoBehaviour:
     max: 1
   toeLength:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0.359
     min: 0
     max: 1
   shoulderStrength:
