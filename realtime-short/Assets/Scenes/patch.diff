@@ -1,0 +1,811 @@
+diff --git a/realtime-short/Assets/Environment/Models/sm_VanityDesk.fbx b/realtime-short/Assets/Environment/Models/sm_VanityDesk.fbx
+index 79e8506..196306b 100644
+Binary files a/realtime-short/Assets/Environment/Models/sm_VanityDesk.fbx and b/realtime-short/Assets/Environment/Models/sm_VanityDesk.fbx differ
+diff --git a/realtime-short/Assets/Environment/Models/sm_VanityDesk.fbx.meta b/realtime-short/Assets/Environment/Models/sm_VanityDesk.fbx.meta
+index 5dc406f..187bee1 100644
+--- a/realtime-short/Assets/Environment/Models/sm_VanityDesk.fbx.meta
++++ b/realtime-short/Assets/Environment/Models/sm_VanityDesk.fbx.meta
+@@ -3,7 +3,12 @@ guid: 4c2ea29371c79164e9bbbd36e7310744
+ ModelImporter:
+   serializedVersion: 26
+   internalIDToNameTable: []
+-  externalObjects: {}
++  externalObjects:
++  - first:
++      type: UnityEngine:Material
++      assembly: UnityEngine.CoreModule
++      name: sm_Vase_mat_plastic
++    second: {fileID: 2100000, guid: 9adbc7b735088d84381eb150931b1904, type: 2}
+   materials:
+     importMaterials: 1
+     materialName: 0
+diff --git a/realtime-short/Assets/Environment/Textures/Vanity.meta b/realtime-short/Assets/Environment/Textures/Vanity.meta
+new file mode 100644
+index 0000000..07c15dc
+--- /dev/null
++++ b/realtime-short/Assets/Environment/Textures/Vanity.meta
+@@ -0,0 +1,8 @@
++fileFormatVersion: 2
++guid: b99b68d97fab36040bf495a62358d945
++folderAsset: yes
++DefaultImporter:
++  externalObjects: {}
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 
+diff --git a/realtime-short/Assets/Environment/Textures/Vanity/Sm_Vanity_mat.mat b/realtime-short/Assets/Environment/Textures/Vanity/Sm_Vanity_mat.mat
+new file mode 100644
+index 0000000..591ad91
+--- /dev/null
++++ b/realtime-short/Assets/Environment/Textures/Vanity/Sm_Vanity_mat.mat
+@@ -0,0 +1,250 @@
++%YAML 1.1
++%TAG !u! tag:unity3d.com,2011:
++--- !u!21 &2100000
++Material:
++  serializedVersion: 6
++  m_ObjectHideFlags: 0
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
++  m_PrefabAsset: {fileID: 0}
++  m_Name: Sm_Vanity_mat
++  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
++  m_ShaderKeywords: _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE
++  m_LightmapFlags: 4
++  m_EnableInstancingVariants: 0
++  m_DoubleSidedGI: 0
++  m_CustomRenderQueue: -1
++  stringTagMap: {}
++  disabledShaderPasses:
++  - DistortionVectors
++  - TransparentDepthPrepass
++  - TransparentDepthPostpass
++  - TransparentBackface
++  - MOTIONVECTORS
++  m_SavedProperties:
++    serializedVersion: 3
++    m_TexEnvs:
++    - _AnisotropyMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _BaseColorMap:
++        m_Texture: {fileID: 2800000, guid: 9bf52acd2696c244d8eaf6d50b74252a, type: 3}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _BentNormalMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _BentNormalMapOS:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _CoatMaskMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _DetailMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _DistortionVectorMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _EmissiveColorMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _HeightMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _IridescenceMaskMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _IridescenceThicknessMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _MainTex:
++        m_Texture: {fileID: 2800000, guid: 9bf52acd2696c244d8eaf6d50b74252a, type: 3}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _MaskMap:
++        m_Texture: {fileID: 2800000, guid: 83106863d99e8194f87ce1d2864c1bdb, type: 3}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _NormalMap:
++        m_Texture: {fileID: 2800000, guid: bc597022d4242be489cfa6202bc2ede7, type: 3}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _NormalMapOS:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _SpecularColorMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _SubsurfaceMaskMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _TangentMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _TangentMapOS:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _ThicknessMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    - _TransmittanceColorMap:
++        m_Texture: {fileID: 0}
++        m_Scale: {x: 1, y: 1}
++        m_Offset: {x: 0, y: 0}
++    m_Floats:
++    - _AORemapMax: 0.99999994
++    - _AORemapMin: 0
++    - _ATDistance: 1
++    - _AlbedoAffectEmissive: 0
++    - _AlphaCutoff: 0.5
++    - _AlphaCutoffEnable: 0
++    - _AlphaCutoffPostpass: 0.5
++    - _AlphaCutoffPrepass: 0.5
++    - _AlphaCutoffShadow: 0.5
++    - _Anisotropy: 0
++    - _BlendMode: 0
++    - _CoatMask: 0
++    - _CullMode: 2
++    - _CullModeForward: 2
++    - _Cutoff: 0.5
++    - _DepthOffsetEnable: 0
++    - _DetailAlbedoScale: 1
++    - _DetailNormalScale: 1
++    - _DetailSmoothnessScale: 1
++    - _DiffusionProfile: 0
++    - _DiffusionProfileHash: 0
++    - _DisplacementLockObjectScale: 1
++    - _DisplacementLockTilingScale: 1
++    - _DisplacementMode: 0
++    - _DistortionBlendMode: 0
++    - _DistortionBlurBlendMode: 0
++    - _DistortionBlurDstBlend: 1
++    - _DistortionBlurRemapMax: 1
++    - _DistortionBlurRemapMin: 0
++    - _DistortionBlurScale: 1
++    - _DistortionBlurSrcBlend: 1
++    - _DistortionDepthTest: 1
++    - _DistortionDstBlend: 1
++    - _DistortionEnable: 0
++    - _DistortionScale: 1
++    - _DistortionSrcBlend: 1
++    - _DistortionVectorBias: -1
++    - _DistortionVectorScale: 2
++    - _DoubleSidedEnable: 0
++    - _DoubleSidedNormalMode: 1
++    - _Drag: 1
++    - _DstBlend: 0
++    - _EmissiveColorMode: 1
++    - _EmissiveExposureWeight: 1
++    - _EmissiveIntensity: 1
++    - _EmissiveIntensityUnit: 0
++    - _EnableBlendModePreserveSpecularLighting: 1
++    - _EnableFogOnTransparent: 1
++    - _EnableGeometricSpecularAA: 0
++    - _EnableMotionVectorForVertexAnimation: 0
++    - _EnableSpecularOcclusion: 0
++    - _EnableWind: 0
++    - _EnergyConservingSpecularColor: 1
++    - _HdrpVersion: 2
++    - _HeightAmplitude: 0.02
++    - _HeightCenter: 0.5
++    - _HeightMapParametrization: 0
++    - _HeightMax: 1
++    - _HeightMin: -1
++    - _HeightOffset: 0
++    - _HeightPoMAmplitude: 2
++    - _HeightTessAmplitude: 2
++    - _HeightTessCenter: 0.5
++    - _InitialBend: 1
++    - _InvTilingScale: 1
++    - _Ior: 1
++    - _IridescenceMask: 1
++    - _IridescenceThickness: 1
++    - _LinkDetailsWithBase: 1
++    - _MaterialID: 1
++    - _Metallic: 0
++    - _NormalMapSpace: 0
++    - _NormalScale: 1
++    - _PPDLodThreshold: 5
++    - _PPDMaxSamples: 15
++    - _PPDMinSamples: 5
++    - _PPDPrimitiveLength: 1
++    - _PPDPrimitiveWidth: 1
++    - _ReceivesSSR: 1
++    - _RefractionModel: 0
++    - _SSRefractionProjectionModel: 0
++    - _ShiverDirectionality: 0.5
++    - _ShiverDrag: 0.2
++    - _Smoothness: 0.5
++    - _SmoothnessRemapMax: 1
++    - _SmoothnessRemapMin: 0.026320117
++    - _SpecularAAScreenSpaceVariance: 0.1
++    - _SpecularAAThreshold: 0.2
++    - _SrcBlend: 1
++    - _StencilRef: 2
++    - _StencilRefDepth: 0
++    - _StencilRefDistortionVec: 64
++    - _StencilRefGBuffer: 2
++    - _StencilRefMV: 128
++    - _StencilWriteMask: 3
++    - _StencilWriteMaskDepth: 48
++    - _StencilWriteMaskDistortionVec: 64
++    - _StencilWriteMaskGBuffer: 51
++    - _StencilWriteMaskMV: 176
++    - _Stiffness: 1
++    - _SubsurfaceMask: 1
++    - _SupportDecals: 1
++    - _SurfaceType: 0
++    - _TexWorldScale: 1
++    - _TexWorldScaleEmissive: 1
++    - _Thickness: 1
++    - _ThicknessMultiplier: 1
++    - _TransmissionEnable: 1
++    - _TransparentBackfaceEnable: 0
++    - _TransparentDepthPostpassEnable: 0
++    - _TransparentDepthPrepassEnable: 0
++    - _TransparentSortPriority: 0
++    - _TransparentWritingVelocity: 0
++    - _UVBase: 0
++    - _UVDetail: 0
++    - _UVEmissive: 0
++    - _UseEmissiveIntensity: 0
++    - _UseShadowThreshold: 0
++    - _ZTestDepthEqualForOpaque: 3
++    - _ZTestGBuffer: 4
++    - _ZTestModeDistortion: 4
++    - _ZWrite: 1
++    m_Colors:
++    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
++    - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
++    - _Color: {r: 1, g: 1, b: 1, a: 1}
++    - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
++    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
++    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
++    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
++    - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
++    - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
++    - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
++    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
++    - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
++    - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
++    - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
++    - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
++    - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
+diff --git a/realtime-short/Assets/Environment/Textures/Vanity/Sm_Vanity_mat.mat.meta b/realtime-short/Assets/Environment/Textures/Vanity/Sm_Vanity_mat.mat.meta
+new file mode 100644
+index 0000000..3132874
+--- /dev/null
++++ b/realtime-short/Assets/Environment/Textures/Vanity/Sm_Vanity_mat.mat.meta
+@@ -0,0 +1,8 @@
++fileFormatVersion: 2
++guid: 9adbc7b735088d84381eb150931b1904
++NativeFormatImporter:
++  externalObjects: {}
++  mainObjectFileID: 2100000
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 
+diff --git a/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_BaseColor.png b/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_BaseColor.png
+new file mode 100644
+index 0000000..67c90ce
+Binary files /dev/null and b/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_BaseColor.png differ
+diff --git a/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_BaseColor.png.meta b/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_BaseColor.png.meta
+new file mode 100644
+index 0000000..df6b5a9
+--- /dev/null
++++ b/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_BaseColor.png.meta
+@@ -0,0 +1,139 @@
++fileFormatVersion: 2
++guid: 9bf52acd2696c244d8eaf6d50b74252a
++TextureImporter:
++  internalIDToNameTable: []
++  externalObjects: {}
++  serializedVersion: 9
++  mipmaps:
++    mipMapMode: 0
++    enableMipMap: 1
++    sRGBTexture: 1
++    linearTexture: 0
++    fadeOut: 0
++    borderMipMap: 0
++    mipMapsPreserveCoverage: 0
++    alphaTestReferenceValue: 0.5
++    mipMapFadeDistanceStart: 1
++    mipMapFadeDistanceEnd: 3
++  bumpmap:
++    convertToNormalMap: 0
++    externalNormalMap: 0
++    heightScale: 0.25
++    normalMapFilter: 0
++  isReadable: 0
++  streamingMipmaps: 0
++  streamingMipmapsPriority: 0
++  grayScaleToAlpha: 0
++  generateCubemap: 6
++  cubemapConvolution: 0
++  seamlessCubemap: 0
++  textureFormat: 1
++  maxTextureSize: 2048
++  textureSettings:
++    serializedVersion: 2
++    filterMode: -1
++    aniso: 4
++    mipBias: -1
++    wrapU: -1
++    wrapV: -1
++    wrapW: -1
++  nPOTScale: 1
++  lightmap: 0
++  compressionQuality: 50
++  spriteMode: 0
++  spriteExtrude: 1
++  spriteMeshType: 1
++  alignment: 0
++  spritePivot: {x: 0.5, y: 0.5}
++  spritePixelsToUnits: 100
++  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
++  spriteGenerateFallbackPhysicsShape: 1
++  alphaUsage: 1
++  alphaIsTransparency: 0
++  spriteTessellationDetail: -1
++  textureType: 0
++  textureShape: 1
++  singleChannelComponent: 0
++  maxTextureSizeSet: 0
++  compressionQualitySet: 0
++  textureFormatSet: 0
++  platformSettings:
++  - serializedVersion: 3
++    buildTarget: DefaultTexturePlatform
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  - serializedVersion: 3
++    buildTarget: Standalone
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  - serializedVersion: 3
++    buildTarget: iPhone
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  - serializedVersion: 3
++    buildTarget: Android
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  - serializedVersion: 3
++    buildTarget: Windows Store Apps
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  spriteSheet:
++    serializedVersion: 2
++    sprites: []
++    outline: []
++    physicsShape: []
++    bones: []
++    spriteID: 
++    internalID: 0
++    vertices: []
++    indices: 
++    edges: []
++    weights: []
++    secondaryTextures: []
++  spritePackingTag: 
++  pSDRemoveMatte: 0
++  pSDShowRemoveMatteOption: 0
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 
+diff --git a/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_MaskMap.png b/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_MaskMap.png
+new file mode 100644
+index 0000000..02aca5b
+Binary files /dev/null and b/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_MaskMap.png differ
+diff --git a/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_MaskMap.png.meta b/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_MaskMap.png.meta
+new file mode 100644
+index 0000000..66932d3
+--- /dev/null
++++ b/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_MaskMap.png.meta
+@@ -0,0 +1,139 @@
++fileFormatVersion: 2
++guid: 83106863d99e8194f87ce1d2864c1bdb
++TextureImporter:
++  internalIDToNameTable: []
++  externalObjects: {}
++  serializedVersion: 9
++  mipmaps:
++    mipMapMode: 0
++    enableMipMap: 1
++    sRGBTexture: 1
++    linearTexture: 0
++    fadeOut: 0
++    borderMipMap: 0
++    mipMapsPreserveCoverage: 0
++    alphaTestReferenceValue: 0.5
++    mipMapFadeDistanceStart: 1
++    mipMapFadeDistanceEnd: 3
++  bumpmap:
++    convertToNormalMap: 0
++    externalNormalMap: 0
++    heightScale: 0.25
++    normalMapFilter: 0
++  isReadable: 0
++  streamingMipmaps: 0
++  streamingMipmapsPriority: 0
++  grayScaleToAlpha: 0
++  generateCubemap: 6
++  cubemapConvolution: 0
++  seamlessCubemap: 0
++  textureFormat: 1
++  maxTextureSize: 2048
++  textureSettings:
++    serializedVersion: 2
++    filterMode: -1
++    aniso: 4
++    mipBias: -1
++    wrapU: -1
++    wrapV: -1
++    wrapW: -1
++  nPOTScale: 1
++  lightmap: 0
++  compressionQuality: 50
++  spriteMode: 0
++  spriteExtrude: 1
++  spriteMeshType: 1
++  alignment: 0
++  spritePivot: {x: 0.5, y: 0.5}
++  spritePixelsToUnits: 100
++  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
++  spriteGenerateFallbackPhysicsShape: 1
++  alphaUsage: 1
++  alphaIsTransparency: 0
++  spriteTessellationDetail: -1
++  textureType: 0
++  textureShape: 1
++  singleChannelComponent: 0
++  maxTextureSizeSet: 0
++  compressionQualitySet: 0
++  textureFormatSet: 0
++  platformSettings:
++  - serializedVersion: 3
++    buildTarget: DefaultTexturePlatform
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  - serializedVersion: 3
++    buildTarget: Standalone
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  - serializedVersion: 3
++    buildTarget: iPhone
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  - serializedVersion: 3
++    buildTarget: Android
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  - serializedVersion: 3
++    buildTarget: Windows Store Apps
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  spriteSheet:
++    serializedVersion: 2
++    sprites: []
++    outline: []
++    physicsShape: []
++    bones: []
++    spriteID: 
++    internalID: 0
++    vertices: []
++    indices: 
++    edges: []
++    weights: []
++    secondaryTextures: []
++  spritePackingTag: 
++  pSDRemoveMatte: 0
++  pSDShowRemoveMatteOption: 0
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 
+diff --git a/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_Normal.png b/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_Normal.png
+new file mode 100644
+index 0000000..21d936e
+Binary files /dev/null and b/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_Normal.png differ
+diff --git a/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_Normal.png.meta b/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_Normal.png.meta
+new file mode 100644
+index 0000000..374819a
+--- /dev/null
++++ b/realtime-short/Assets/Environment/Textures/Vanity/sm_VanityDesk_sm_Vase_mat_plastic_Normal.png.meta
+@@ -0,0 +1,139 @@
++fileFormatVersion: 2
++guid: bc597022d4242be489cfa6202bc2ede7
++TextureImporter:
++  internalIDToNameTable: []
++  externalObjects: {}
++  serializedVersion: 9
++  mipmaps:
++    mipMapMode: 0
++    enableMipMap: 1
++    sRGBTexture: 1
++    linearTexture: 0
++    fadeOut: 0
++    borderMipMap: 0
++    mipMapsPreserveCoverage: 0
++    alphaTestReferenceValue: 0.5
++    mipMapFadeDistanceStart: 1
++    mipMapFadeDistanceEnd: 3
++  bumpmap:
++    convertToNormalMap: 0
++    externalNormalMap: 0
++    heightScale: 0.25
++    normalMapFilter: 0
++  isReadable: 0
++  streamingMipmaps: 0
++  streamingMipmapsPriority: 0
++  grayScaleToAlpha: 0
++  generateCubemap: 6
++  cubemapConvolution: 0
++  seamlessCubemap: 0
++  textureFormat: 1
++  maxTextureSize: 2048
++  textureSettings:
++    serializedVersion: 2
++    filterMode: -1
++    aniso: 4
++    mipBias: -1
++    wrapU: -1
++    wrapV: -1
++    wrapW: -1
++  nPOTScale: 1
++  lightmap: 0
++  compressionQuality: 50
++  spriteMode: 0
++  spriteExtrude: 1
++  spriteMeshType: 1
++  alignment: 0
++  spritePivot: {x: 0.5, y: 0.5}
++  spritePixelsToUnits: 100
++  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
++  spriteGenerateFallbackPhysicsShape: 1
++  alphaUsage: 1
++  alphaIsTransparency: 0
++  spriteTessellationDetail: -1
++  textureType: 0
++  textureShape: 1
++  singleChannelComponent: 0
++  maxTextureSizeSet: 0
++  compressionQualitySet: 0
++  textureFormatSet: 0
++  platformSettings:
++  - serializedVersion: 3
++    buildTarget: DefaultTexturePlatform
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  - serializedVersion: 3
++    buildTarget: Standalone
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  - serializedVersion: 3
++    buildTarget: iPhone
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  - serializedVersion: 3
++    buildTarget: Android
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  - serializedVersion: 3
++    buildTarget: Windows Store Apps
++    maxTextureSize: 8192
++    resizeAlgorithm: 0
++    textureFormat: -1
++    textureCompression: 1
++    compressionQuality: 50
++    crunchedCompression: 0
++    allowsAlphaSplitting: 0
++    overridden: 0
++    androidETC2FallbackOverride: 0
++    forceMaximumCompressionQuality_BC6H_BC7: 0
++  spriteSheet:
++    serializedVersion: 2
++    sprites: []
++    outline: []
++    physicsShape: []
++    bones: []
++    spriteID: 
++    internalID: 0
++    vertices: []
++    indices: 
++    edges: []
++    weights: []
++    secondaryTextures: []
++  spritePackingTag: 
++  pSDRemoveMatte: 0
++  pSDShowRemoveMatteOption: 0
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 
+diff --git a/realtime-short/Assets/Scenes/Main_Furniture.unity b/realtime-short/Assets/Scenes/Main_Furniture.unity
+index 5130399..72aea0f 100644
+--- a/realtime-short/Assets/Scenes/Main_Furniture.unity
++++ b/realtime-short/Assets/Scenes/Main_Furniture.unity
+@@ -255,22 +255,22 @@ PrefabInstance:
+     - target: {fileID: -4216859302048453862, guid: 4c2ea29371c79164e9bbbd36e7310744,
+         type: 3}
+       propertyPath: m_LocalRotation.x
+-      value: -0.28262377
++      value: -0
+       objectReference: {fileID: 0}
+     - target: {fileID: -4216859302048453862, guid: 4c2ea29371c79164e9bbbd36e7310744,
+         type: 3}
+       propertyPath: m_LocalRotation.y
+-      value: -0.6481697
++      value: -0.916649
+       objectReference: {fileID: 0}
+     - target: {fileID: -4216859302048453862, guid: 4c2ea29371c79164e9bbbd36e7310744,
+         type: 3}
+       propertyPath: m_LocalRotation.z
+-      value: -0.64816946
++      value: 0
+       objectReference: {fileID: 0}
+     - target: {fileID: -4216859302048453862, guid: 4c2ea29371c79164e9bbbd36e7310744,
+         type: 3}
+       propertyPath: m_LocalRotation.w
+-      value: 0.28262374
++      value: 0.3996932
+       objectReference: {fileID: 0}
+     - target: {fileID: -4216859302048453862, guid: 4c2ea29371c79164e9bbbd36e7310744,
+         type: 3}
+@@ -280,23 +280,23 @@ PrefabInstance:
+     - target: {fileID: -4216859302048453862, guid: 4c2ea29371c79164e9bbbd36e7310744,
+         type: 3}
+       propertyPath: m_LocalEulerAnglesHint.x
+-      value: -90.00001
++      value: -180
+       objectReference: {fileID: 0}
+     - target: {fileID: -4216859302048453862, guid: 4c2ea29371c79164e9bbbd36e7310744,
+         type: 3}
+       propertyPath: m_LocalEulerAnglesHint.y
+-      value: 0
++      value: 47.117996
+       objectReference: {fileID: 0}
+     - target: {fileID: -4216859302048453862, guid: 4c2ea29371c79164e9bbbd36e7310744,
+         type: 3}
+       propertyPath: m_LocalEulerAnglesHint.z
+-      value: -132.882
++      value: -180
+       objectReference: {fileID: 0}
+     - target: {fileID: -1504981713932161579, guid: 4c2ea29371c79164e9bbbd36e7310744,
+         type: 3}
+       propertyPath: m_Materials.Array.data[0]
+       value: 
+-      objectReference: {fileID: 2100000, guid: 9ad010d367f96c646ba443e3200b1f55, type: 2}
++      objectReference: {fileID: 2100000, guid: 9adbc7b735088d84381eb150931b1904, type: 2}
+     m_RemovedComponents: []
+   m_SourcePrefab: {fileID: 100100000, guid: 4c2ea29371c79164e9bbbd36e7310744, type: 3}
+ --- !u!4 &70503170 stripped
