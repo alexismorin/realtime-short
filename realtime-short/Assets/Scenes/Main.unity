@@ -185,8 +185,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 0
 --- !u!4 &1323476002
 Transform:
   m_ObjectHideFlags: 0
@@ -565,6 +565,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pf_Dollhouse
       objectReference: {fileID: 0}
+    - target: {fileID: 2747279620870214201, guid: 03a38180cdac3bc429e3cd77b62c6119,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2747279620870214200, guid: 03a38180cdac3bc429e3cd77b62c6119,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -698,7 +703,7 @@ PrefabInstance:
     - target: {fileID: 3317147860041586454, guid: 03a38180cdac3bc429e3cd77b62c6119,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3317147860041586454, guid: 03a38180cdac3bc429e3cd77b62c6119,
         type: 3}
@@ -740,6 +745,41 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 112ff54ff1f49744c97156ba26605489, type: 2}
+    - target: {fileID: 6125354352433640392, guid: 03a38180cdac3bc429e3cd77b62c6119,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 791081697494827988, guid: 03a38180cdac3bc429e3cd77b62c6119,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747279620230883078, guid: 03a38180cdac3bc429e3cd77b62c6119,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230737826487754992, guid: 03a38180cdac3bc429e3cd77b62c6119,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622410622870408725, guid: 03a38180cdac3bc429e3cd77b62c6119,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125354351019595194, guid: 03a38180cdac3bc429e3cd77b62c6119,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125354351691421853, guid: 03a38180cdac3bc429e3cd77b62c6119,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03a38180cdac3bc429e3cd77b62c6119, type: 3}
 --- !u!4 &1730487703 stripped

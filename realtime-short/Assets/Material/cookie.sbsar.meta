@@ -23,7 +23,7 @@ ScriptedImporter:
       alphaSource: baseColor
     textureParameters:
     - textureName: Cookie_color - baseColor
-      wrapMode: 0
+      wrapMode: 1
       filterMode: 1
       aniso: 1
     colorSpaceList:
@@ -37,7 +37,8 @@ ScriptedImporter:
       textureHeight: 2048
       textureFormat: 0
       bGenerateOnLoad: 1
-    material: {instanceID: 0}
+    material: {fileID: 5698240675447349458, guid: 0badc75996e31f14ab0e12a1147c058a,
+      type: 3}
     generatedTextures: []
   - graphLabel: cookie
     prototypeName: cookie
@@ -66,7 +67,8 @@ ScriptedImporter:
       textureHeight: 2048
       textureFormat: 0
       bGenerateOnLoad: 1
-    material: {instanceID: 0}
+    material: {fileID: -1154677798674613415, guid: 0badc75996e31f14ab0e12a1147c058a,
+      type: 3}
     generatedTextures: []
   - graphLabel: simple_cookie
     prototypeName: simple_cookie
@@ -95,5 +97,6 @@ ScriptedImporter:
       textureHeight: 2048
       textureFormat: 0
       bGenerateOnLoad: 1
-    material: {instanceID: 0}
+    material: {fileID: -7206479246565255828, guid: 0badc75996e31f14ab0e12a1147c058a,
+      type: 3}
     generatedTextures: []
