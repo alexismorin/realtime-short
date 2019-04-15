@@ -89,7 +89,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d2b1b8ea737d59541af779afdb741b67, type: 3}
+        m_Texture: {fileID: 2800000, guid: 80d7bf7fc615eed45a203a417d488459, type: 3}
         m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -277,7 +277,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0, g: 0, b: 0, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _CardboardTint: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+    - _CardboardTint: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
