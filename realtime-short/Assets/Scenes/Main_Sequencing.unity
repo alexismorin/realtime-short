@@ -7843,7 +7843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RootBone: {fileID: 846943518}
-  StoppedFrameCount: 7
+  StoppedFrameCount: 11
 --- !u!1 &854381212
 GameObject:
   m_ObjectHideFlags: 0
@@ -15830,7 +15830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RootBone: {fileID: 2128631381}
-  StoppedFrameCount: 7
+  StoppedFrameCount: 11
 --- !u!1 &2139922081
 GameObject:
   m_ObjectHideFlags: 0
